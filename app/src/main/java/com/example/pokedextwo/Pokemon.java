@@ -2,7 +2,7 @@ package com.example.pokedextwo;
 
 import java.util.List;
 
-public class pokemon {
+public class Pokemon {
 
     private String name;
     private String[] types;
@@ -14,7 +14,8 @@ public class pokemon {
     private int speed;
     private int imageResourceId;
 
-    public pokemon(String name, String[] types, int hp, int attack, int defense, int sattack, int sdefense, int speed) {
+
+    public Pokemon(String name, String[] types, int hp, int attack, int defense, int sattack, int sdefense, int speed, int imageResourceId) {
         this.name = name;
         this.types = types;
         this.hp = hp;
@@ -23,6 +24,8 @@ public class pokemon {
         this.sattack = sattack;
         this.sdefense = sdefense;
         this.speed = speed;
+        this.imageResourceId = imageResourceId;
+
     }
 
 
@@ -89,5 +92,14 @@ public class pokemon {
     public void setSpeed(int speed) {
         this.speed = speed;
     }
+
+    public int getImageResourceId() {
+        return imageResourceId;
+    }
+
+    public void setImageResourceId(int imageResourceId) {
+        this.imageResourceId = imageResourceId;
+    }
+
 
 }

@@ -2,67 +2,67 @@ package com.example.pokedextwo;
 
 public class PokemonFamily {
 
-    public pokemon first;
-    public pokemon second;
-    public pokemon third;
+    public Pokemon first;
+    public Pokemon second;
+    public Pokemon third;
     public String famName;
 
-    private static pokemon charmander = new pokemon("Charmander", new String[] {"fire"}, 39, 52, 43, 60, 50, 65);
-    private static pokemon charmeleon = new pokemon("Charmeleon", new String[] {"fire"}, 58, 64, 58, 80, 65, 80);
-    private static pokemon charizard = new pokemon("Charizard", new String[] {"fire", "flying"}, 78, 84, 78, 109, 85, 100);
-    private static pokemon bulbasaur = new pokemon("Bulbasaur", new String[] {"grass", "poison"}, 45, 49, 49, 65, 65, 45);
-    private static pokemon ivysaur = new pokemon("Ivysaur", new String[] {"grass", "poison"}, 60, 62, 63, 80, 80, 60);
-    private static pokemon venusaur = new pokemon("Venusaur", new String[] {"grass", "poison"}, 80, 82, 83, 100, 100, 80);
-    private static pokemon squirtle = new pokemon("Squirtle", new String[] {"water"}, 44, 48, 65, 50, 64, 43);
-    private static pokemon wartortle = new pokemon("Wartortle", new String[] {"water"}, 59, 63, 80, 65, 80, 58);
-    private static pokemon blastoise = new pokemon("Blastoise", new String[] {"water"}, 79, 83, 100, 85, 105, 78);
+    private static Pokemon charmander = new Pokemon("Charmander", new String[] {"fire"}, 39, 52, 43, 60, 50, 65, R.drawable.charmander);
+    private static Pokemon charmeleon = new Pokemon("Charmeleon", new String[] {"fire"}, 58, 64, 58, 80, 65, 80, R.drawable.charmeleon);
+    private static Pokemon charizard = new Pokemon("Charizard", new String[] {"fire", "flying"}, 78, 84, 78, 109, 85, 100, R.drawable.charizard);
+    private static Pokemon bulbasaur = new Pokemon("Bulbasaur", new String[] {"grass", "poison"}, 45, 49, 49, 65, 65, 45, R.drawable.bulbasaur);
+    private static Pokemon ivysaur = new Pokemon("Ivysaur", new String[] {"grass", "poison"}, 60, 62, 63, 80, 80, 60, R.drawable.ivysaur);
+    private static Pokemon venusaur = new Pokemon("Venusaur", new String[] {"grass", "poison"}, 80, 82, 83, 100, 100, 80, R.drawable.venusaur);
+    private static Pokemon squirtle = new Pokemon("Squirtle", new String[] {"water"}, 44, 48, 65, 50, 64, 43, R.drawable.squirtle);
+    private static Pokemon wartortle = new Pokemon("Wartortle", new String[] {"water"}, 59, 63, 80, 65, 80, 58, R.drawable.wartortle);
+    private static Pokemon blastoise = new Pokemon("Blastoise", new String[] {"water"}, 79, 83, 100, 85, 105, 78, R.drawable.blastoise);
 
     public static final PokemonFamily charFamily = new PokemonFamily(charmander, charmeleon, charizard, "Char Family");
     public static final PokemonFamily bulbFamily = new PokemonFamily(bulbasaur, ivysaur, venusaur, "Bulb Family");
     public static final PokemonFamily turtleFamily = new PokemonFamily(squirtle, wartortle, blastoise, "Turtle Family");
 
-    public static final pokemon[] poks = {charmander, charmeleon, charizard, bulbasaur, ivysaur, venusaur, squirtle, wartortle, blastoise};
+    public static final Pokemon[] poks = {charmander, charmeleon, charizard, bulbasaur, ivysaur, venusaur, squirtle, wartortle, blastoise};
 
 
-    public PokemonFamily(pokemon first, String famName) {
+    public PokemonFamily(Pokemon first, String famName) {
         this.first = first;
         this.famName = famName;
     }
 
-    public PokemonFamily(pokemon first, pokemon second, String famName) {
+    public PokemonFamily(Pokemon first, Pokemon second, String famName) {
         this.first = first;
         this.second = second;
         this.famName = famName;
     }
 
-    public PokemonFamily(pokemon first, pokemon second, pokemon third, String famName) {
+    public PokemonFamily(Pokemon first, Pokemon second, Pokemon third, String famName) {
         this.first = first;
         this.second = second;
         this.third = third;
         this.famName = famName;
     }
 
-    public pokemon getFirst() {
+    public Pokemon getFirst() {
         return first;
     }
 
-    public void setFirst(pokemon first) {
+    public void setFirst(Pokemon first) {
         this.first = first;
     }
 
-    public pokemon getSecond() {
+    public Pokemon getSecond() {
         return second;
     }
 
-    public void setSecond(pokemon second) {
+    public void setSecond(Pokemon second) {
         this.second = second;
     }
 
-    public pokemon getThird() {
+    public Pokemon getThird() {
         return third;
     }
 
-    public void setThird(pokemon third) {
+    public void setThird(Pokemon third) {
         this.third = third;
     }
 

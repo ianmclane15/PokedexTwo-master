@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class pokemon_activity extends AppCompatActivity {
+public class Pokemon_activity extends AppCompatActivity {
 
     public static final String EXTRA_POKEMONID = "pokemonID";
 
@@ -16,7 +16,7 @@ public class pokemon_activity extends AppCompatActivity {
         setContentView(R.layout.activity_pokemon);
 
         int poksId = (Integer)getIntent().getExtras().get(EXTRA_POKEMONID);
-        pokemon p = PokemonFamily.poks[poksId];
+        Pokemon p = PokemonFamily.poks[poksId];
 
         TextView name = (TextView)findViewById(R.id.textview_main_name);
         name.setText(p.getName());
@@ -42,8 +42,8 @@ public class pokemon_activity extends AppCompatActivity {
 
 
 
-        ImageView photo = (ImageView)findViewById(R.id.photo);
-        photo.setImageResource(p.getImageResourceID());
+        ImageView photo = (ImageView)findViewById(R.id.photo_main_pokemon);
+        photo.setImageResource(p.getImageResourceId());
         photo.setContentDescription(p.getName());
 
     }

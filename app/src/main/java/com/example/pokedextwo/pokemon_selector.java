@@ -7,16 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-
-
-import java.util.List;
 
 public class pokemon_selector extends AppCompatActivity {
     //region Instance Variables
@@ -33,16 +28,16 @@ public class pokemon_selector extends AppCompatActivity {
         //instantiate the custom adapter that is defined later
         PokemonAdapter pokemonAdapter =
                 new PokemonAdapter(this, R.layout.item_pokemon,   //R.layout.list_pokemon
-                        pokemon.poks);
+                        PokemonFamily.poks);
         //set the adapter to the listView
         listView.setAdapter(pokemonAdapter);
         AdapterView.OnItemClickListener itemClickListener =
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent intent = new Intent(pokemon_selector.this, pokemon_activity.class);
+                        Intent intent = new Intent(pokemon_selector.this, Pokemon_activity.class);
 
-                        intent.putExtra(pokemon_activity.EXTRA_POKEMONID, (int) id);
+                        intent.putExtra(Pokemon_activity.EXTRA_POKEMONID, (int) id);
                         startActivity(intent);
                    }
                 };
@@ -51,13 +46,13 @@ public class pokemon_selector extends AppCompatActivity {
     //endregion
 
     //region Custom Adapter Definition: It's a class within a class, AKA an Inner Class
-    private class PokemonAdapter extends ArrayAdapter<pokemon> {
+    private class PokemonAdapter extends ArrayAdapter<Pokemon> {
         //just like any regular class, inner classes can store instance variables
         private int layout;
         private Context context;
-        private pokemon[] list;
+        private Pokemon[] list;
 
-        public PokemonAdapter(Context context, int resource, pokemon[] list) {
+        public PokemonAdapter(Context context, int resource, Pokemon[] list) {
             //this constructor has the superclass do its setup and then stores
             //the values passed in as arguments into the instance variables.
             super(context, resource, list);
@@ -81,7 +76,7 @@ public class pokemon_selector extends AppCompatActivity {
             TextView desc = convertView.findViewById(R.id.textView_name);
 
             //put the data that you got from your model object into those views
-            imageView.setImageResource(list[position].getImageResourceID());
+            imageView.setImageResource(list[position].getImageResourceId());
             desc.setText(list[position].getName());
 
             //now that the view has been fully set up, we return it
