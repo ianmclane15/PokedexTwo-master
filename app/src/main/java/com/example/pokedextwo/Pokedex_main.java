@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-public class top_level extends Activity {
+public class Pokedex_main extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +19,15 @@ public class top_level extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Intent intent = new Intent(top_level.this, pokemon_selector.class);
+                    Intent intent = new Intent(Pokedex_main.this, pokemon_selector.class);
                     startActivity(intent);
                 }
                 else if (position == 2){
-                    Intent intent = new Intent(top_level.this, MapActivity.class);
+                    Intent intent = new Intent(Pokedex_main.this, MapActivity.class);
                     startActivity(intent);
                 }
                 else if (position == 1){
-                    Intent intent = new Intent(top_level.this, TypeChart.class);
+                    Intent intent = new Intent(Pokedex_main.this, TypeChart.class);
                     startActivity(intent);
                 }
             }
