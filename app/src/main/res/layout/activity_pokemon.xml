@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cecece"
     tools:context=".Pokemon_activity">
 
 
@@ -119,7 +118,7 @@
     <TextView
         android:id="@+id/textview_main_hp"
         android:layout_width="162dp"
-        android:layout_height="37dp"
+        android:layout_height="32dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -175,6 +174,7 @@
         android:layout_marginStart="8dp"
         android:fontFamily="serif-monospace"
         android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/photo_main_evo1"
         app:layout_constraintEnd_toStartOf="@+id/textview_main_speed"
         app:layout_constraintHorizontal_bias="1.0"

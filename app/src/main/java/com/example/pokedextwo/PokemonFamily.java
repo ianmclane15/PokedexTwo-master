@@ -7,15 +7,15 @@ public class PokemonFamily {
     public Pokemon third;
     public String famName;
 
-    private static Pokemon charmander = new Pokemon("Charmander", new String[] {"fire"}, 39, 52, 43, 60, 50, 65, R.drawable.charmander);
-    private static Pokemon charmeleon = new Pokemon("Charmeleon", new String[] {"fire"}, 58, 64, 58, 80, 65, 80, R.drawable.charmeleon);
-    private static Pokemon charizard = new Pokemon("Charizard", new String[] {"fire", "flying"}, 78, 84, 78, 109, 85, 100, R.drawable.charizard);
-    private static Pokemon bulbasaur = new Pokemon("Bulbasaur", new String[] {"grass", "poison"}, 45, 49, 49, 65, 65, 45, R.drawable.bulbasaur);
-    private static Pokemon ivysaur = new Pokemon("Ivysaur", new String[] {"grass", "poison"}, 60, 62, 63, 80, 80, 60, R.drawable.ivysaur);
-    private static Pokemon venusaur = new Pokemon("Venusaur", new String[] {"grass", "poison"}, 80, 82, 83, 100, 100, 80, R.drawable.venusaur);
-    private static Pokemon squirtle = new Pokemon("Squirtle", new String[] {"water"}, 44, 48, 65, 50, 64, 43, R.drawable.squirtle);
-    private static Pokemon wartortle = new Pokemon("Wartortle", new String[] {"water"}, 59, 63, 80, 65, 80, 58, R.drawable.wartortle);
-    private static Pokemon blastoise = new Pokemon("Blastoise", new String[] {"water"}, 79, 83, 100, 85, 105, 78, R.drawable.blastoise);
+    private static Pokemon charmander = new Pokemon("Charmander","fire", 39, 52, 43, 60, 50, 65, R.drawable.charmander);
+    private static Pokemon charmeleon = new Pokemon("Charmeleon","fire", 58, 64, 58, 80, 65, 80, R.drawable.charmeleon);
+    private static Pokemon charizard = new Pokemon("Charizard", "fire, flying", 78, 84, 78, 109, 85, 100, R.drawable.charizard);
+    private static Pokemon bulbasaur = new Pokemon("Bulbasaur", "grass, poison", 45, 49, 49, 65, 65, 45, R.drawable.bulbasaur);
+    private static Pokemon ivysaur = new Pokemon("Ivysaur", "grass, poison" , 60, 62, 63, 80, 80, 60, R.drawable.ivysaur);
+    private static Pokemon venusaur = new Pokemon("Venusaur", "grass poison", 80, 82, 83, 100, 100, 80, R.drawable.venusaur);
+    private static Pokemon squirtle = new Pokemon("Squirtle", "water", 44, 48, 65, 50, 64, 43, R.drawable.squirtle);
+    private static Pokemon wartortle = new Pokemon("Wartortle", "water", 59, 63, 80, 65, 80, 58, R.drawable.wartortle);
+    private static Pokemon blastoise = new Pokemon("Blastoise", "water", 79, 83, 100, 85, 105, 78, R.drawable.blastoise);
 
     public static final PokemonFamily charFamily = new PokemonFamily(charmander, charmeleon, charizard, "Char Family");
     public static final PokemonFamily bulbFamily = new PokemonFamily(bulbasaur, ivysaur, venusaur, "Bulb Family");

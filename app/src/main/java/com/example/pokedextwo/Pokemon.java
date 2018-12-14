@@ -5,7 +5,7 @@ import java.util.List;
 public class Pokemon {
 
     private String name;
-    private String[] types;
+    private String types;
     private int hp;
     private int attack;
     private int defense;
@@ -15,7 +15,7 @@ public class Pokemon {
     private int imageResourceId;
 
 
-    public Pokemon(String name, String[] types, int hp, int attack, int defense, int sattack, int sdefense, int speed, int imageResourceId) {
+    public Pokemon(String name, String types, int hp, int attack, int defense, int sattack, int sdefense, int speed, int imageResourceId) {
         this.name = name;
         this.types = types;
         this.hp = hp;
@@ -37,11 +37,11 @@ public class Pokemon {
         this.name = name;
     }
 
-    public String[] getTypes() {
+    public String getTypes() {
         return types;
     }
 
-    public void setTypes(String[] types) {
+    public void setTypes(String types) {
         this.types = types;
     }
 
