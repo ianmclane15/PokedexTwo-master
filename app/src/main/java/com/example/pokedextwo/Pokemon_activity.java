@@ -1,11 +1,13 @@
 package com.example.pokedextwo;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Pokemon_activity extends AppCompatActivity {
@@ -23,6 +25,20 @@ public class Pokemon_activity extends AppCompatActivity {
 
         TextView name = (TextView)findViewById(R.id.textview_main_name);
         name.setText(p.getName());
+
+        View someView = findViewById(R.id.layout_main_background);
+        View root = someView.getRootView();
+
+        if(p.getTypes().contains("fire") || p.getTypes().contains("fire, flying")){
+
+            root.setBackgroundColor(Color.parseColor("#FFA07A"));
+        }
+        else if(p.getTypes().contains("grass, poison")){
+            root.setBackgroundColor(Color.parseColor("#98FB98"));
+        }
+        else{
+            root.setBackgroundColor(Color.parseColor("#AFEEEE"));
+        }
 
         TextView hp = (TextView)findViewById(R.id.textview_main_hp);
         hp.setText("HP: " + p.getHp());
@@ -153,6 +169,7 @@ public class Pokemon_activity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+
         }
 
 
